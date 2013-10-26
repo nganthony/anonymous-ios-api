@@ -7,9 +7,15 @@
 //
 
 #import "JSONModel.h"
+#import "User.h"
 
 @interface Comment : JSONModel
 
 @property (nonatomic, assign) int postId;
+@property (nonatomic, assign) int id;
+@property (nonatomic, assign) NSString *text;
+@property (nonatomic, assign) User *user;
+@property (nonatomic, assign) BOOL isAnonymous;
+@property (nonatomic, assign) long createdTimeStamp;
 
 @end
