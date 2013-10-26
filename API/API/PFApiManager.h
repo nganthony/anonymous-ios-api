@@ -10,4 +10,8 @@
 
 @interface PFApiManager : NSObject
 
++ (PFApiManager *)sharedInstance;
+
+- (void)authenticate:(NSString *)userName withPassword:(NSString *)password;
+
 @end

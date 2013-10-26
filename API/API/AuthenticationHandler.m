@@ -10,8 +10,11 @@
 
 @implementation AuthenticationHandler
 
+NSMutableData *_receivedData;
+
 - (void)authenticate:(NSString *)userName
         withPassword:(NSString *)password {
+    _receivedData = [NSMutableData dataWithLength:0];
     NSString *jsonRequest = [self createJsonRequest:userName password:password];
     NSURL *authUrl = [NSURL URLWithString:@"http://54.200.78.124:8080/0.0.1-SNAPSHOT/users/login"];
     
@@ -29,22 +32,26 @@
 #pragma mark NSURLConnectionDelegate methods
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    return;
+    [_receivedData setLength:0];
+    // TODO: This means we were not able to attempt the request, need to figure out what to do here (graceful failure)
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    return;
+    [_receivedData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    return;
+    [_receivedData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
-    return;
+    // Nothing to do here
+}
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSString *response = [[NSString alloc] initWithData:_receivedData encoding:NSUTF8StringEncoding];
 }
 
-#pragma mark - 
+#pragma mark -
 #pragma mark private
 
 - (NSString *)createJsonRequest:(NSString *)userName password:(NSString *)password {
