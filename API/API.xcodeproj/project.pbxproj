@@ -19,6 +19,26 @@
 		651218DD181C4F920009FF4C /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218D2181C4F920009FF4C /* JSONKeyMapper.m */; };
 		651218DE181C4F920009FF4C /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218D4181C4F920009FF4C /* JSONValueTransformer.m */; };
 		651218E0181C502F0009FF4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651218DF181C502F0009FF4C /* UIKit.framework */; };
+		651218E5181C5E420009FF4C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218E4181C5E420009FF4C /* User.m */; };
+		651218E8181C62D60009FF4C /* UserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218E7181C62D60009FF4C /* UserCredentials.m */; };
+		651218EB181C63CD0009FF4C /* UserRegistrationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218EA181C63CD0009FF4C /* UserRegistrationInfo.m */; };
+		651218EE181C64890009FF4C /* Zone.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218ED181C64890009FF4C /* Zone.m */; };
+		651218F1181C655C0009FF4C /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218F0181C655C0009FF4C /* PostInfo.m */; };
+		651218F4181C6A390009FF4C /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218F3181C6A390009FF4C /* Post.m */; };
+		651218F7181C6AF00009FF4C /* Likes.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218F6181C6AF00009FF4C /* Likes.m */; };
+		651218FA181C6C9D0009FF4C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218F9181C6C9D0009FF4C /* Message.m */; };
+		651218FD181C6D340009FF4C /* CommentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218FC181C6D340009FF4C /* CommentInfo.m */; };
+		65121900181C6E200009FF4C /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 651218FF181C6E200009FF4C /* Comment.m */; };
+		65121901181C6E960009FF4C /* User.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218E3181C5E420009FF4C /* User.h */; };
+		65121902181C6E9F0009FF4C /* UserCredentials.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218E6181C62D60009FF4C /* UserCredentials.h */; };
+		65121903181C6EB30009FF4C /* UserRegistrationInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218E9181C63CD0009FF4C /* UserRegistrationInfo.h */; };
+		65121904181C6EB30009FF4C /* Zone.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218EC181C64890009FF4C /* Zone.h */; };
+		65121905181C6EB30009FF4C /* PostInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218EF181C655C0009FF4C /* PostInfo.h */; };
+		65121906181C6EB30009FF4C /* Post.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218F2181C6A390009FF4C /* Post.h */; };
+		65121907181C6EB30009FF4C /* Likes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218F5181C6AF00009FF4C /* Likes.h */; };
+		65121908181C6EB30009FF4C /* Message.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218F8181C6C9D0009FF4C /* Message.h */; };
+		65121909181C6EB30009FF4C /* CommentInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218FB181C6D340009FF4C /* CommentInfo.h */; };
+		6512190A181C6EB30009FF4C /* Comment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218FE181C6E200009FF4C /* Comment.h */; };
 		65803925181373380083088A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65803924181373380083088A /* Foundation.framework */; };
 		6580392A181373380083088A /* API.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65803929181373380083088A /* API.h */; };
 		6580392C181373380083088A /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580392B181373380083088A /* API.m */; };
@@ -51,6 +71,16 @@
 			dstPath = "~/Development/PlayField-Api";
 			dstSubfolderSpec = 0;
 			files = (
+				65121903181C6EB30009FF4C /* UserRegistrationInfo.h in CopyFiles */,
+				65121904181C6EB30009FF4C /* Zone.h in CopyFiles */,
+				65121905181C6EB30009FF4C /* PostInfo.h in CopyFiles */,
+				65121906181C6EB30009FF4C /* Post.h in CopyFiles */,
+				65121907181C6EB30009FF4C /* Likes.h in CopyFiles */,
+				65121908181C6EB30009FF4C /* Message.h in CopyFiles */,
+				65121909181C6EB30009FF4C /* CommentInfo.h in CopyFiles */,
+				6512190A181C6EB30009FF4C /* Comment.h in CopyFiles */,
+				65121902181C6E9F0009FF4C /* UserCredentials.h in CopyFiles */,
+				65121901181C6E960009FF4C /* User.h in CopyFiles */,
 				65B794751814674F00D0D2CA /* AuthenticationHandler.h in CopyFiles */,
 				6580397318138BD50083088A /* PFApiManager.h in CopyFiles */,
 				6580392A181373380083088A /* API.h in CopyFiles */,
@@ -83,6 +113,26 @@
 		651218D3181C4F920009FF4C /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
 		651218D4181C4F920009FF4C /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		651218DF181C502F0009FF4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		651218E3181C5E420009FF4C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		651218E4181C5E420009FF4C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		651218E6181C62D60009FF4C /* UserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCredentials.h; sourceTree = "<group>"; };
+		651218E7181C62D60009FF4C /* UserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCredentials.m; sourceTree = "<group>"; };
+		651218E9181C63CD0009FF4C /* UserRegistrationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegistrationInfo.h; sourceTree = "<group>"; };
+		651218EA181C63CD0009FF4C /* UserRegistrationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegistrationInfo.m; sourceTree = "<group>"; };
+		651218EC181C64890009FF4C /* Zone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zone.h; sourceTree = "<group>"; };
+		651218ED181C64890009FF4C /* Zone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zone.m; sourceTree = "<group>"; };
+		651218EF181C655C0009FF4C /* PostInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfo.h; sourceTree = "<group>"; };
+		651218F0181C655C0009FF4C /* PostInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInfo.m; sourceTree = "<group>"; };
+		651218F2181C6A390009FF4C /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		651218F3181C6A390009FF4C /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		651218F5181C6AF00009FF4C /* Likes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Likes.h; sourceTree = "<group>"; };
+		651218F6181C6AF00009FF4C /* Likes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Likes.m; sourceTree = "<group>"; };
+		651218F8181C6C9D0009FF4C /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		651218F9181C6C9D0009FF4C /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		651218FB181C6D340009FF4C /* CommentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentInfo.h; sourceTree = "<group>"; };
+		651218FC181C6D340009FF4C /* CommentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentInfo.m; sourceTree = "<group>"; };
+		651218FE181C6E200009FF4C /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		651218FF181C6E200009FF4C /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		65803921181373380083088A /* libAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		65803924181373380083088A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65803928181373380083088A /* API-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API-Prefix.pch"; sourceTree = "<group>"; };
@@ -185,6 +235,33 @@
 			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
+		651218E2181C5DC60009FF4C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				651218E3181C5E420009FF4C /* User.h */,
+				651218E4181C5E420009FF4C /* User.m */,
+				651218E6181C62D60009FF4C /* UserCredentials.h */,
+				651218E7181C62D60009FF4C /* UserCredentials.m */,
+				651218E9181C63CD0009FF4C /* UserRegistrationInfo.h */,
+				651218EA181C63CD0009FF4C /* UserRegistrationInfo.m */,
+				651218EC181C64890009FF4C /* Zone.h */,
+				651218ED181C64890009FF4C /* Zone.m */,
+				651218EF181C655C0009FF4C /* PostInfo.h */,
+				651218F0181C655C0009FF4C /* PostInfo.m */,
+				651218F2181C6A390009FF4C /* Post.h */,
+				651218F3181C6A390009FF4C /* Post.m */,
+				651218F5181C6AF00009FF4C /* Likes.h */,
+				651218F6181C6AF00009FF4C /* Likes.m */,
+				651218F8181C6C9D0009FF4C /* Message.h */,
+				651218F9181C6C9D0009FF4C /* Message.m */,
+				651218FB181C6D340009FF4C /* CommentInfo.h */,
+				651218FC181C6D340009FF4C /* CommentInfo.m */,
+				651218FE181C6E200009FF4C /* Comment.h */,
+				651218FF181C6E200009FF4C /* Comment.m */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
 		65803918181373370083088A = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +297,7 @@
 		65803926181373380083088A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				651218E2181C5DC60009FF4C /* Domain */,
 				65803929181373380083088A /* API.h */,
 				6580392B181373380083088A /* API.m */,
 				65803927181373380083088A /* Supporting Files */,
@@ -344,11 +422,21 @@
 				651218DA181C4F920009FF4C /* JSONAPI.m in Sources */,
 				651218DE181C4F920009FF4C /* JSONValueTransformer.m in Sources */,
 				6580394C1813741D0083088A /* PFApiManager.m in Sources */,
+				65121900181C6E200009FF4C /* Comment.m in Sources */,
+				651218F4181C6A390009FF4C /* Post.m in Sources */,
 				651218D5181C4F920009FF4C /* JSONModel.m in Sources */,
+				651218EB181C63CD0009FF4C /* UserRegistrationInfo.m in Sources */,
 				651218DD181C4F920009FF4C /* JSONKeyMapper.m in Sources */,
+				651218FA181C6C9D0009FF4C /* Message.m in Sources */,
+				651218F7181C6AF00009FF4C /* Likes.m in Sources */,
+				651218E5181C5E420009FF4C /* User.m in Sources */,
 				651218DC181C4F920009FF4C /* JSONModel+networking.m in Sources */,
+				651218F1181C655C0009FF4C /* PostInfo.m in Sources */,
 				651218D9181C4F920009FF4C /* NSArray+JSONModel.m in Sources */,
 				6580392C181373380083088A /* API.m in Sources */,
+				651218FD181C6D340009FF4C /* CommentInfo.m in Sources */,
+				651218EE181C64890009FF4C /* Zone.m in Sources */,
+				651218E8181C62D60009FF4C /* UserCredentials.m in Sources */,
 				6580394F18137B330083088A /* AuthenticationHandler.m in Sources */,
 				651218D7181C4F920009FF4C /* JSONModelClassProperty.m in Sources */,
 			);
