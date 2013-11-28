@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CommentInfo : NSObject
+#import "JSONModel.h"
+@interface CommentInfo : JSONModel
+
+@property (nonatomic, assign) NSString *text;
+@property (nonatomic, assign) int userId;
+@property (nonatomic, assign) int postId;
+@property (nonatomic, assign) BOOL isAnonymous;
 
 - (id)initWithText:(NSString *)text userId:(int)userId postId:(int)postId isAnonymous:(BOOL)isAnonymous;
 

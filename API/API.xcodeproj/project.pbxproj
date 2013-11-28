@@ -39,6 +39,11 @@
 		65121908181C6EB30009FF4C /* Message.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218F8181C6C9D0009FF4C /* Message.h */; };
 		65121909181C6EB30009FF4C /* CommentInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218FB181C6D340009FF4C /* CommentInfo.h */; };
 		6512190A181C6EB30009FF4C /* Comment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 651218FE181C6E200009FF4C /* Comment.h */; };
+		6560EA7B182ED3E60093EC39 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560EA7A182ED3E60093EC39 /* HttpRequest.m */; };
+		6560EAFA183EF74F0093EC39 /* HttpError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560EAF9183EF74F0093EC39 /* HttpError.m */; };
+		65640C13181F552D00063CE0 /* Metadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 65640C12181F552D00063CE0 /* Metadata.m */; };
+		65640C16181F55C300063CE0 /* Pagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 65640C15181F55C300063CE0 /* Pagination.m */; };
+		65640C19181F56CC00063CE0 /* Envelope.m in Sources */ = {isa = PBXBuildFile; fileRef = 65640C18181F56CC00063CE0 /* Envelope.m */; };
 		65803925181373380083088A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65803924181373380083088A /* Foundation.framework */; };
 		6580392A181373380083088A /* API.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65803929181373380083088A /* API.h */; };
 		6580392C181373380083088A /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580392B181373380083088A /* API.m */; };
@@ -49,9 +54,9 @@
 		6580393F181373380083088A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6580393D181373380083088A /* InfoPlist.strings */; };
 		65803941181373380083088A /* APITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65803940181373380083088A /* APITests.m */; };
 		6580394C1813741D0083088A /* PFApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580394B1813741D0083088A /* PFApiManager.m */; };
-		6580394F18137B330083088A /* AuthenticationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580394E18137B330083088A /* AuthenticationHandler.m */; };
+		6580394F18137B330083088A /* UserResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6580394E18137B330083088A /* UserResource.m */; };
 		6580397318138BD50083088A /* PFApiManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6580394A1813741D0083088A /* PFApiManager.h */; };
-		65B794751814674F00D0D2CA /* AuthenticationHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6580394D18137B330083088A /* AuthenticationHandler.h */; };
+		65B794751814674F00D0D2CA /* UserResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6580394D18137B330083088A /* UserResource.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +86,7 @@
 				6512190A181C6EB30009FF4C /* Comment.h in CopyFiles */,
 				65121902181C6E9F0009FF4C /* UserCredentials.h in CopyFiles */,
 				65121901181C6E960009FF4C /* User.h in CopyFiles */,
-				65B794751814674F00D0D2CA /* AuthenticationHandler.h in CopyFiles */,
+				65B794751814674F00D0D2CA /* UserResource.h in CopyFiles */,
 				6580397318138BD50083088A /* PFApiManager.h in CopyFiles */,
 				6580392A181373380083088A /* API.h in CopyFiles */,
 			);
@@ -133,6 +138,16 @@
 		651218FC181C6D340009FF4C /* CommentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentInfo.m; sourceTree = "<group>"; };
 		651218FE181C6E200009FF4C /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		651218FF181C6E200009FF4C /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		6560EA79182ED3E60093EC39 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		6560EA7A182ED3E60093EC39 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		6560EAF8183EF74F0093EC39 /* HttpError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpError.h; sourceTree = "<group>"; };
+		6560EAF9183EF74F0093EC39 /* HttpError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpError.m; sourceTree = "<group>"; };
+		65640C11181F552D00063CE0 /* Metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metadata.h; sourceTree = "<group>"; };
+		65640C12181F552D00063CE0 /* Metadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Metadata.m; sourceTree = "<group>"; };
+		65640C14181F55C300063CE0 /* Pagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pagination.h; sourceTree = "<group>"; };
+		65640C15181F55C300063CE0 /* Pagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pagination.m; sourceTree = "<group>"; };
+		65640C17181F56CC00063CE0 /* Envelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Envelope.h; sourceTree = "<group>"; };
+		65640C18181F56CC00063CE0 /* Envelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Envelope.m; sourceTree = "<group>"; };
 		65803921181373380083088A /* libAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		65803924181373380083088A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65803928181373380083088A /* API-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "API-Prefix.pch"; sourceTree = "<group>"; };
@@ -146,8 +161,8 @@
 		65803940181373380083088A /* APITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APITests.m; sourceTree = "<group>"; };
 		6580394A1813741D0083088A /* PFApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFApiManager.h; sourceTree = "<group>"; };
 		6580394B1813741D0083088A /* PFApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFApiManager.m; sourceTree = "<group>"; };
-		6580394D18137B330083088A /* AuthenticationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationHandler.h; sourceTree = "<group>"; };
-		6580394E18137B330083088A /* AuthenticationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationHandler.m; sourceTree = "<group>"; };
+		6580394D18137B330083088A /* UserResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserResource.h; path = API/UserResource.h; sourceTree = "<group>"; };
+		6580394E18137B330083088A /* UserResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserResource.m; path = API/UserResource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +277,40 @@
 			name = Domain;
 			sourceTree = "<group>";
 		};
+		6560EA78182ED3C80093EC39 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6560EA79182ED3E60093EC39 /* HttpRequest.h */,
+				6560EA7A182ED3E60093EC39 /* HttpRequest.m */,
+				6560EAF8183EF74F0093EC39 /* HttpError.h */,
+				6560EAF9183EF74F0093EC39 /* HttpError.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		6560EAF7183EF6090093EC39 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6580394D18137B330083088A /* UserResource.h */,
+				6580394E18137B330083088A /* UserResource.m */,
+			);
+			name = Resource;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		65640C10181F551200063CE0 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				65640C11181F552D00063CE0 /* Metadata.h */,
+				65640C12181F552D00063CE0 /* Metadata.m */,
+				65640C14181F55C300063CE0 /* Pagination.h */,
+				65640C15181F55C300063CE0 /* Pagination.m */,
+				65640C17181F56CC00063CE0 /* Envelope.h */,
+				65640C18181F56CC00063CE0 /* Envelope.m */,
+			);
+			name = Structure;
+			sourceTree = "<group>";
+		};
 		65803918181373370083088A = {
 			isa = PBXGroup;
 			children = (
@@ -297,14 +346,15 @@
 		65803926181373380083088A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				6560EAF7183EF6090093EC39 /* Resource */,
+				6560EA78182ED3C80093EC39 /* Utilities */,
+				65640C10181F551200063CE0 /* Structure */,
 				651218E2181C5DC60009FF4C /* Domain */,
 				65803929181373380083088A /* API.h */,
 				6580392B181373380083088A /* API.m */,
 				65803927181373380083088A /* Supporting Files */,
 				6580394A1813741D0083088A /* PFApiManager.h */,
 				6580394B1813741D0083088A /* PFApiManager.m */,
-				6580394D18137B330083088A /* AuthenticationHandler.h */,
-				6580394E18137B330083088A /* AuthenticationHandler.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -420,8 +470,12 @@
 				651218D6181C4F920009FF4C /* JSONModelArray.m in Sources */,
 				651218D8181C4F920009FF4C /* JSONModelError.m in Sources */,
 				651218DA181C4F920009FF4C /* JSONAPI.m in Sources */,
+				6560EAFA183EF74F0093EC39 /* HttpError.m in Sources */,
 				651218DE181C4F920009FF4C /* JSONValueTransformer.m in Sources */,
+				65640C16181F55C300063CE0 /* Pagination.m in Sources */,
 				6580394C1813741D0083088A /* PFApiManager.m in Sources */,
+				65640C19181F56CC00063CE0 /* Envelope.m in Sources */,
+				65640C13181F552D00063CE0 /* Metadata.m in Sources */,
 				65121900181C6E200009FF4C /* Comment.m in Sources */,
 				651218F4181C6A390009FF4C /* Post.m in Sources */,
 				651218D5181C4F920009FF4C /* JSONModel.m in Sources */,
@@ -432,12 +486,13 @@
 				651218E5181C5E420009FF4C /* User.m in Sources */,
 				651218DC181C4F920009FF4C /* JSONModel+networking.m in Sources */,
 				651218F1181C655C0009FF4C /* PostInfo.m in Sources */,
+				6560EA7B182ED3E60093EC39 /* HttpRequest.m in Sources */,
 				651218D9181C4F920009FF4C /* NSArray+JSONModel.m in Sources */,
 				6580392C181373380083088A /* API.m in Sources */,
 				651218FD181C6D340009FF4C /* CommentInfo.m in Sources */,
 				651218EE181C64890009FF4C /* Zone.m in Sources */,
 				651218E8181C62D60009FF4C /* UserCredentials.m in Sources */,
-				6580394F18137B330083088A /* AuthenticationHandler.m in Sources */,
+				6580394F18137B330083088A /* UserResource.m in Sources */,
 				651218D7181C4F920009FF4C /* JSONModelClassProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

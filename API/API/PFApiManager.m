@@ -8,7 +8,7 @@
 
 #import "PFApiManager.h"
 
-#import "AuthenticationHandler.h"
+#import "UserResource.h"
 
 @implementation PFApiManager
 
@@ -21,10 +21,9 @@ static PFApiManager *_sharedApiManager;
     return _sharedApiManager;
 }
 
-- (void)authenticate:(NSString *)userName
-        withPassword:(NSString *)password {
-    AuthenticationHandler *authHandler = [[AuthenticationHandler alloc] init];
-    [authHandler authenticate:userName withPassword:password];
+- (void)login:(UserCredentials *)userCredentials {
+    UserResource *authHandler = [[UserResource alloc] init];
+    [authHandler login:userCredentials];
 }
 
 

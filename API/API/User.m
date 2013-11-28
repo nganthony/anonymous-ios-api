@@ -10,4 +10,8 @@
 
 @implementation User
 
+- (id) initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    return [super initWithDictionary:dict error:err];
+}
+
 @end

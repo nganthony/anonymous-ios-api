@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserCredentials.h"
 
 @interface PFApiManager : NSObject
 
 + (PFApiManager *)sharedInstance;
 
-- (void)authenticate:(NSString *)userName withPassword:(NSString *)password;
+- (void)login:(UserCredentials *)userCredentials;
 
 @end

@@ -10,18 +10,13 @@
 
 @implementation CommentInfo
 
-NSString *_text;
-int _userId;
-int _postId;
-BOOL _isAnonymous;
-
 - (id)initWithText:(NSString *)text userId:(int)userId postId:(int)postId isAnonymous:(BOOL)isAnonymous {
     self = [super init];
     if (self) {
-        _text = text;
-        _userId = userId;
-        _postId = postId;
-        _isAnonymous = isAnonymous;
+        self.text = text;
+        self.userId = userId;
+        self.postId = postId;
+        self.isAnonymous = isAnonymous;
     }
     return self;
 }

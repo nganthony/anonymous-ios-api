@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PostInfo : NSObject
+#import "JSONModel.h"
+
+@interface PostInfo : JSONModel
+
+@property (nonatomic, assign) NSString *text;
+@property (nonatomic, assign) int userId;
+@property (nonatomic, assign) int zoneId;
+@property (nonatomic, assign) float longitude;
+@property (nonatomic, assign) float latitude;
+@property (nonatomic, assign) BOOL isAnonymous;
 
 - (id)initWithText:(NSString *)text
             userId:(int)userId

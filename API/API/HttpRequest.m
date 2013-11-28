@@ -1,25 +1,33 @@
 //
-//  AuthenticationHandler.m
+//  HttpRequest.m
 //  API
 //
-//  Created by Abdul Qureshi on 2013-10-19.
+//  Created by Abdul Qureshi on 2013-11-09.
 //  Copyright (c) 2013 PlayField. All rights reserved.
 //
 
-#import "AuthenticationHandler.h"
+#import "HttpRequest.h"
+#import "JSONModel.h"
 
-@implementation AuthenticationHandler
+@implementation HttpRequest
 
 NSMutableData *_receivedData;
 
-- (void)authenticate:(NSString *)userName
-        withPassword:(NSString *)password {
-    _receivedData = [NSMutableData dataWithLength:0];
-    NSString *jsonRequest = [self createJsonRequest:userName password:password];
-    NSURL *authUrl = [NSURL URLWithString:@"http://54.200.78.124:8080/0.0.1-SNAPSHOT/users/login"];
+- (id)initWithDelegate:(id<HttpRequestDelegate>)delegate {
+    self = [super init];
+    if (self) {
+        _receivedData = [[NSMutableData alloc] init];
+        self.delegate = delegate;
+    }
+    return self;
+}
+
+- (void)sendJSONPostWithUrl:(NSString *)url jsonObject:(JSONModel *)jsonObject {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:authUrl];
-    NSData *data = [NSData dataWithBytes:[jsonRequest UTF8String] length:[jsonRequest length]];
+    NSString *jsonString = [jsonObject toJSONString];
+    NSData *data = [NSData dataWithBytes:[jsonString UTF8String] length:[jsonString length]];
+    
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[data length]] forHTTPHeaderField:@"Content-Length"];
@@ -28,8 +36,13 @@ NSMutableData *_receivedData;
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
-#pragma mark-
-#pragma mark NSURLConnectionDelegate methods
+- (void)sendGetWithUrl:(NSString *)url {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [request setHTTPMethod:@"GET"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:self];
+}
+#pragma mark NSURLConnectionDelegate
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [_receivedData setLength:0];
@@ -49,14 +62,7 @@ NSMutableData *_receivedData;
 }
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSString *response = [[NSString alloc] initWithData:_receivedData encoding:NSUTF8StringEncoding];
+    
+    [self.delegate didGetResponse:response];
 }
-
-#pragma mark -
-#pragma mark private
-
-- (NSString *)createJsonRequest:(NSString *)userName password:(NSString *)password {
-    //TODO: use JSON serialization
-    return [NSString stringWithFormat:@"{\"username\":\"%@\",\"password\":\"%@\"}", userName, password];
-}
-
 @end

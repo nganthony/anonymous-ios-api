@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserCredentials : NSObject
+#import "JSONModel.h"
+
+@interface UserCredentials : JSONModel
+
+@property (nonatomic, assign) NSString *username;
+@property (nonatomic, assign) NSString *password;
 
 - (id)initWithUsername:(NSString *)username password:(NSString *)password;
 

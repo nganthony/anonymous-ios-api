@@ -14,9 +14,9 @@
 @property (nonatomic, assign) int id;
 @property (nonatomic, assign) NSString *username;
 @property (nonatomic, assign) NSString *name;
-@property (nonatomic, assign) NSString *description;
+@property (nonatomic, assign) NSString<Optional> *description;
 @property (nonatomic, assign) NSString *email;
-@property (nonatomic, assign) NSString *profilePhoto;
+@property (nonatomic, assign) NSString<Optional> *profilePhoto;
 @property (nonatomic, assign) long createdTimestamp;
 @property (nonatomic, assign) BOOL isEnabled;
 

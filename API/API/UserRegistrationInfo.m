@@ -10,16 +10,12 @@
 
 @implementation UserRegistrationInfo
 
-NSString *_username;
-NSString *_password;
-NSString *_email;
-
 - (id)initWithUsername:(NSString *)username password:(NSString *)password email:(NSString *)email {
     self = [super init];
     if (self) {
-        _username = username;
-        _password = password;
-        _email = email;
+        self.username = username;
+        self.password = password;
+        self.email = email;
     }
     return self;
 }
