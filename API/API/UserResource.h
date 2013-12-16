@@ -24,7 +24,7 @@
 
 @interface UserResource : NSObject <HttpRequestDelegate>
 
-@property(nonatomic, weak) id<UserDelegate> delegate;
+@property(nonatomic, strong) id<UserDelegate> delegate;
 
 - (void)login:(UserCredentials *)userCredentials;
 

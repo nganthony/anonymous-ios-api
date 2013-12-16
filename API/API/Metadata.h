@@ -10,8 +10,8 @@
 
 @interface Metadata : JSONModel
 
-@property (nonatomic, assign)NSString<Optional> *errorType;
 @property (nonatomic, assign) int code;
+@property (nonatomic, assign) NSString<Optional> *errorType;
 @property (nonatomic, assign) NSString<Optional> *errorMessage;
 
 @end

@@ -59,7 +59,7 @@ HttpRequest *_request;
     NSError *error = nil;
     Envelope *envelope = [[Envelope alloc] initWithString:response error:&error];
     if (error == nil) {
-        if (envelope.metadata.code == 200) {
+        if (envelope.metadata.code == 202) {
             User *user = [self userFromDictionary:envelope.result];
             [self.delegate responseWithUser:user];
             return;

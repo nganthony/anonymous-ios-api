@@ -12,8 +12,8 @@
 
 @interface Envelope : JSONModel
 
-@property (nonatomic, assign) Metadata *metadata;
 @property (nonatomic, assign) NSDictionary *result;
+@property (nonatomic, assign) Metadata *metadata;
 @property (nonatomic, assign) Pagination<Optional> *pagination;
 
 @end
