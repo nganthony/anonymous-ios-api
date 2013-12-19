@@ -14,4 +14,8 @@
     return [super initWithString:string error:err];
 }
 
+//- (id)initForSingleResponseWithString:(NSString *)string error:(JSONModelError *__autoreleasing *)err {
+//    self.result = []
+//}
+
 @end
