@@ -13,10 +13,9 @@
 @property (nonatomic, assign) int id;
 @property (nonatomic, assign) NSString *primaryName;
 @property (nonatomic, assign) NSString *secondaryName;
-@property (nonatomic, assign) float latitude1;
-@property (nonatomic, assign) float latitude2;
-@property (nonatomic, assign) float longitude1;
-@property (nonatomic, assign) float longitude2;
+@property (nonatomic, assign) float latitude;
+@property (nonatomic, assign) float longitude;
+@property (nonatomic, assign) float radius;
 @property (nonatomic, assign) NSString *bannerPhoto;
 @property (nonatomic, assign) BOOL comingSoon;
 
