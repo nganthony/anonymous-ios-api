@@ -31,6 +31,7 @@ NSMutableData *_receivedData;
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[data length]] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"g2534Id3f082RXd56RQ63xF367TNw1338H174389P12460Tw4q8565E8221x" forHTTPHeaderField:@"accessToken"];
     [request setHTTPBody:data];
     
     [NSURLConnection connectionWithRequest:request delegate:self];
@@ -39,6 +40,7 @@ NSMutableData *_receivedData;
 - (void)sendGetWithUrl:(NSString *)url {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"GET"];
+    [request setValue:@"g2534Id3f082RXd56RQ63xF367TNw1338H174389P12460Tw4q8565E8221x" forHTTPHeaderField:@"accessToken"];
     
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
